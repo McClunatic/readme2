@@ -1,3 +1,5 @@
+library(reshape2)
+
 #Homework Getting and Cleanning Data
 
 #reading features and activity data
@@ -52,4 +54,4 @@ dataset.tidy <- dcast(dataset.melt, activitylabel + subject ~ variable, mean)
 
 
 #creating a tidy dataset file  
-write.table(dataset.tidy, file = "tidydataset.txt" row.names = FALSE)
+write.table(dataset.tidy, file = "tidydataset.txt", row.names = FALSE)
